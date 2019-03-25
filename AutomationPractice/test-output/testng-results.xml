@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29475" started-at="2019-03-25T21:39:04Z" finished-at="2019-03-25T21:39:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29475" started-at="2019-03-25T21:39:04Z" finished-at="2019-03-25T21:39:34Z">
+      <class name="myStore.Purchase">
+        <test-method status="PASS" signature="initilize()[pri:0, instance:myStore.Purchase@662ac478]" name="initilize" is-config="true" duration-ms="7902" started-at="2019-03-25T21:39:04Z" finished-at="2019-03-25T21:39:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilize -->
+        <test-method status="PASS" signature="navigateMyAccount()[pri:1, instance:myStore.Purchase@662ac478]" name="navigateMyAccount" duration-ms="4859" started-at="2019-03-25T21:39:12Z" finished-at="2019-03-25T21:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateMyAccount -->
+        <test-method status="PASS" signature="selectFirstProduct()[pri:2, instance:myStore.Purchase@662ac478]" name="selectFirstProduct" duration-ms="5568" started-at="2019-03-25T21:39:17Z" finished-at="2019-03-25T21:39:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFirstProduct -->
+        <test-method status="PASS" signature="selectSecondProduct()[pri:3, instance:myStore.Purchase@662ac478]" name="selectSecondProduct" duration-ms="10480" started-at="2019-03-25T21:39:23Z" finished-at="2019-03-25T21:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectSecondProduct -->
+        <test-method status="PASS" signature="closeBroser()[pri:0, instance:myStore.Purchase@662ac478]" name="closeBroser" is-config="true" duration-ms="638" started-at="2019-03-25T21:39:33Z" finished-at="2019-03-25T21:39:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBroser -->
+      </class> <!-- myStore.Purchase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

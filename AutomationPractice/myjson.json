@@ -1,0 +1,10 @@
+{"LoginInfo":{
+  "TestSet1": {"email": "Test831987@gmai.com", "password": "Selenium" },
+  "TestSet2": {"email": "Test831987@gmai.com","password": "Selenium1" }},
+"PersonalInfo":{
+"TestSet1":{"FirstName":"Lida","Title":"Mrs"},
+"TestSet2":{"FirstName":"Ann","Title":"Miss"}},
+"Purchase":{
+"TestSet1":{"CatalogName":"Blouses","ProductSort":"In stock","Size":"S","Color":"Black","Composition":"Cotton","Style":"Casual"},
+"TestSet2":{"Categories":"Summer Dresses","ProductSort":"In stock","Size":"S","Color":"Yellow"}}
+}

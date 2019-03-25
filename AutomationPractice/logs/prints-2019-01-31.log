@@ -1,0 +1,6 @@
+15:29:23.529 [main] INFO  myStore.CreateAccount - user name is displayed
+15:29:24.922 [main] INFO  myStore.CreateAccount - My Address link is selected
+15:29:24.923 [main] INFO  myStore.CreateAccount - ****************My Address page **********************
+15:29:26.483 [main] INFO  myStore.CreateAccount - My Address page verification passed
+15:29:27.708 [main] INFO  myStore.CreateAccount - Back to Account button is clicked
+11:13:29.958 [main] INFO  ReusableActions.CatalogSelectionRA - BLOUSES  catalog name is loaded

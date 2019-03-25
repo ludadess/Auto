@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="46327" started-at="2019-03-19T20:05:10Z" finished-at="2019-03-19T20:05:57Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="46327" started-at="2019-03-19T20:05:10Z" finished-at="2019-03-19T20:05:57Z">
+      <class name="myStore.CreateAccount">
+        <test-method status="PASS" signature="initilize()[pri:0, instance:myStore.CreateAccount@67c27493]" name="initilize" is-config="true" duration-ms="6876" started-at="2019-03-19T20:05:10Z" finished-at="2019-03-19T20:05:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilize -->
+        <test-method status="PASS" signature="navigateCreateAccount()[pri:0, instance:myStore.CreateAccount@67c27493]" name="navigateCreateAccount" duration-ms="1829" started-at="2019-03-19T20:05:17Z" finished-at="2019-03-19T20:05:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateCreateAccount -->
+        <test-method status="PASS" signature="setupNewAcount()[pri:0, instance:myStore.CreateAccount@67c27493]" name="setupNewAcount" duration-ms="6876" started-at="2019-03-19T20:05:19Z" finished-at="2019-03-19T20:05:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupNewAcount -->
+        <test-method status="PASS" signature="verifyMyAddress()[pri:0, instance:myStore.CreateAccount@67c27493]" name="verifyMyAddress" duration-ms="3225" started-at="2019-03-19T20:05:26Z" finished-at="2019-03-19T20:05:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMyAddress -->
+        <test-method status="PASS" signature="closeBroser()[pri:0, instance:myStore.CreateAccount@67c27493]" name="closeBroser" is-config="true" duration-ms="621" started-at="2019-03-19T20:05:29Z" finished-at="2019-03-19T20:05:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBroser -->
+      </class> <!-- myStore.CreateAccount -->
+      <class name="myStore.Purchase">
+        <test-method status="PASS" signature="initilize()[pri:0, instance:myStore.Purchase@1a482e36]" name="initilize" is-config="true" duration-ms="6265" started-at="2019-03-19T20:05:30Z" finished-at="2019-03-19T20:05:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilize -->
+        <test-method status="PASS" signature="navigateMyAccount()[pri:1, instance:myStore.Purchase@1a482e36]" name="navigateMyAccount" duration-ms="4602" started-at="2019-03-19T20:05:36Z" finished-at="2019-03-19T20:05:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateMyAccount -->
+        <test-method status="PASS" signature="selectFirstProduct()[pri:2, instance:myStore.Purchase@1a482e36]" name="selectFirstProduct" duration-ms="5199" started-at="2019-03-19T20:05:40Z" finished-at="2019-03-19T20:05:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFirstProduct -->
+        <test-method status="PASS" signature="selectSecondProduct()[pri:3, instance:myStore.Purchase@1a482e36]" name="selectSecondProduct" duration-ms="10095" started-at="2019-03-19T20:05:46Z" finished-at="2019-03-19T20:05:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectSecondProduct -->
+        <test-method status="PASS" signature="closeBroser()[pri:0, instance:myStore.Purchase@1a482e36]" name="closeBroser" is-config="true" duration-ms="710" started-at="2019-03-19T20:05:56Z" finished-at="2019-03-19T20:05:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBroser -->
+      </class> <!-- myStore.Purchase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
