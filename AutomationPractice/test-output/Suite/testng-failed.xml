@@ -9,8 +9,6 @@
     <classes>
       <class name="myStore.Purchase">
         <methods>
-          <include name="selectFirstProduct"/>
-          <include name="navigateMyAccount"/>
           <include name="closeBroser"/>
           <include name="selectSecondProduct"/>
           <include name="initilize"/>

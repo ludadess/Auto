@@ -28,21 +28,35 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
 
 public class Utilities {
 	
 	public static WebDriver driver;
+	public static WebDriverWait wait;
 	public static JSONObject jobj;
 	public static JSONObject jobjPageName;
 	public static JSONObject jobjTestSet;
 	public static XSSFWorkbook workbook;
 	public static Eyes eyes;
+	
+	
+	public static void flashElement (WebElement element, WebDriver driver){
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 for( int i=0; i<50; i++) {
+			 js.executeScript("arguments[0].style.border='2px dashed black'", element);
+			 js.executeScript("arguments[0].style.border='2px dashed white'", element);
+			 }
+	 }
 	
 	public static String readProperty (String fileName,String key) throws IOException {
 		
@@ -215,9 +229,20 @@ public class Utilities {
 	public static String getJSONData (String keyName) {		
 		String keyValue = (String) jobjTestSet.get(keyName);
 		return keyValue;
+		
 	}
 	
+	public static WebElement getWhenVisible(By locator, int timeout) {
+		WebElement element = null;
+		wait = new WebDriverWait(driver, timeout);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element;	
+	}
 	
-	
-   
+	public void clickWhenReady(By locator, int timeout) {
+		WebElement element = null;
+		wait = new WebDriverWait(driver, timeout);
+		element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.click();
+	}
 }

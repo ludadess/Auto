@@ -32,9 +32,7 @@ public class DataTable {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-
 		Workbook excelWorkbook = null;
-
 		// Find the file extension by splitting file name in substring and getting only
 		// extension name
 		String fileExtensionName = FileName.substring(FileName.indexOf("."));
@@ -124,6 +122,8 @@ public class DataTable {
 				break;
 			case BLANK:
 				strCellValue = "";
+				break;
+			default:
 				break;
 			}
 		} else

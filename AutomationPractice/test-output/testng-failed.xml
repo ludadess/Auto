@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="myStore.Listener"/>
+    <listener class-name="myStore.ExtendReportsNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="myStore.DemoExcel">
+      <class name="myStore.Purchase">
         <methods>
-          <include name="Practice"/>
+          <include name="closeBroser"/>
+          <include name="selectSecondProduct"/>
+          <include name="initilize"/>
         </methods>
-      </class> <!-- myStore.DemoExcel -->
+      </class> <!-- myStore.Purchase -->
+      <class name="myStore.CreateAccount">
+        <methods>
+          <include name="verifyMyAddress"/>
+          <include name="setupNewAcount"/>
+          <include name="closeBroser"/>
+          <include name="initilize"/>
+        </methods>
+      </class> <!-- myStore.CreateAccount -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
