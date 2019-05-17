@@ -57,7 +57,6 @@ public class DataTable2 {
 			// If it is xlsx file then create object of XSSFWorkbook class
 			try {
 				workbook = new XSSFWorkbook(inputStream);
-				//sheet = (XSSFSheet) workbook.getSheetAt(0);
 				inputStream.close();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -69,7 +68,6 @@ public class DataTable2 {
 			// If it is xls file then create object of XSSFWorkbook class
 			try {
 				workbook = new HSSFWorkbook(inputStream);
-				//sheet = (HSSFSheet) workbook.getSheetAt(0);
 				inputStream.close();
 			} catch (IOException e) {
 				e.printStackTrace();
