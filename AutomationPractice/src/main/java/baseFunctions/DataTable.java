@@ -15,9 +15,16 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class DataTable {
+	private static XSSFWorkbook workbook = null;
+	private static XSSFSheet sheet = null;
+	private static XSSFRow row   =null;
+	private static XSSFCell cell = null;
 	private static Logger log = LogManager.getLogger(DataTable.class.getName());
 	private static Map<String, String> DataTable = new HashMap<String, String>();
 
@@ -32,7 +39,7 @@ public class DataTable {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		Workbook excelWorkbook = null;
+		Workbook workbook = null;
 		// Find the file extension by splitting file name in substring and getting only
 		// extension name
 		String fileExtensionName = FileName.substring(FileName.indexOf("."));
@@ -41,7 +48,7 @@ public class DataTable {
 		if (fileExtensionName.equals(".xlsx")) {
 			// If it is xlsx file then create object of XSSFWorkbook class
 			try {
-				excelWorkbook = new XSSFWorkbook(inputStream);
+				workbook = new XSSFWorkbook(inputStream);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -50,24 +57,24 @@ public class DataTable {
 		else if (fileExtensionName.equals(".xls")) {
 			// If it is xls file then create object of XSSFWorkbook class
 			try {
-				excelWorkbook = new HSSFWorkbook(inputStream);
+				workbook = new HSSFWorkbook(inputStream);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 		// search for a sheet by SheetName
 		boolean sheetFound = false;
-		int sheetsCount = excelWorkbook.getNumberOfSheets();
+		int sheetsCount = workbook.getNumberOfSheets();
 		for (int i = 0; i < sheetsCount; i++) {
-			if (excelWorkbook.getSheetName(i).equalsIgnoreCase(SheetName)) {// get sheet
+			if (workbook.getSheetName(i).equalsIgnoreCase(SheetName)) {// get sheet
 				sheetFound = true;
-				Sheet excelSheet = excelWorkbook.getSheetAt(i);
+				Sheet sheet = workbook.getSheetAt(i);
 				// Read row0
-				Row row0 = excelSheet.getRow(0);
+				Row row0 = sheet.getRow(0);
 				// Read rowNumber and store in map as a key (column name) and a value (cell
 				// string value)
-				if (RowNumber <= excelSheet.getLastRowNum()) {
-					Row row1 = excelSheet.getRow(RowNumber);
+				if (RowNumber <= sheet.getLastRowNum()) {
+					Row row1 = sheet.getRow(RowNumber);
 					for (int j = 0; j < row0.getLastCellNum(); j++) {
 						Cell cell1 = row1.getCell(j);
 						DataTable.put(row0.getCell(j).getStringCellValue(), getCellValueAsString(cell1));
@@ -76,7 +83,7 @@ public class DataTable {
 						// getCellValueAsString(cell1));
 					}
 				} else {
-					log.error("Total number of rows is " + excelSheet.getLastRowNum() + ". There is no row with number "
+					log.error("Total number of rows is " + sheet.getLastRowNum() + ". There is no row with number "
 							+ RowNumber);
 					System.exit(0);
 				}
